@@ -6,7 +6,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit { 
+export class RegisterComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
   model: any = {};
 
@@ -16,10 +16,10 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-   this.authService.register(this.model).subscribe(()=>{
+   this.authService.register(this.model).subscribe(() => {
     console.log('registration succesful');
    }, error => {
-     console.log('error')
+     console.log('error');
    });
   }
 
